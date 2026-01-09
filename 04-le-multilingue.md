@@ -1,4 +1,4 @@
-> **Version** : 0.11.15
+> **Version** : 0.11.16
 
 # Implémentation du multilingue pour les architectes dans le code HTML.
 
