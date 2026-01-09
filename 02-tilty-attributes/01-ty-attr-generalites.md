@@ -1,4 +1,4 @@
-> **Version** : 0.11.7
+> **Version** : 0.11.8
 
 # Une approche respectueuse du HTML
 
