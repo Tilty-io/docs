@@ -7,6 +7,7 @@
 | Touches                              | Action                                 | Rôles       |             |                |
 |:-------------------------------------|:---------------------------------------|:------------|:------------|:---------------|
 |                                      |                                        | **Lecteur** | **Editeur** | **Architecte** |
+| <kbd>ENTER</kbd>                     | Valide l'action active (ex: formulaire)| x           | x           | x              |
 | <kbd>ESC</kbd>                       | Ferme la fenêtre active                | x           | x           | x              |
 | <kbd>M</kbd>                         | maximise ou minimise la fenêtre active | x           | x           | x              |
 | <kbd>X</kbd> enfoncé                 | Désactive l'édition WYSIWYG            |             | x           | x              |
@@ -28,4 +29,6 @@
 |                                      | atomic data                            |             | x           | x              |
 |                                      | atomic structure                       |             |             | x              |
 |                                      | media                                  |             | x           | x              |
+
+
 
