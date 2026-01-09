@@ -1,4 +1,4 @@
-> **Version** : 0.11.13
+> **Version** : 0.11.14
 
 # Gestion des urls et SEO (finir de rédiger)
 
