@@ -1,6 +1,6 @@
 > **Version** : 0.11.5
 
-# Problématique
+# Les images
 
 Tilty permet de lier une image à un élément HTML en utilisant des attributs standards comme `src` pour n'en citer qu'un. 
 Pour garantir des performances optimales et une expérience utilisateur fluide, il est essentiel d'optimiser ces images.
