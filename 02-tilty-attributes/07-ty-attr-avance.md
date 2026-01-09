@@ -1,4 +1,4 @@
-> **Version** : 0.11.14
+> **Version** : 0.11.15
 
 # Transmettre des variables à javascript via Tilty-json.
 
