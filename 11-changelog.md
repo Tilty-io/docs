@@ -1,4 +1,4 @@
-> **Version** : 0.11.10
+> **Version** : 0.11.11
 
 # Historique des versions
 
