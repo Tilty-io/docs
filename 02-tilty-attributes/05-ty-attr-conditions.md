@@ -1,4 +1,4 @@
-> **Version** : 0.11.11
+> **Version** : 0.11.12
 
 # Les conditions `ty-if`
 
