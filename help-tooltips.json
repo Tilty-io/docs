@@ -1,0 +1,32 @@
+{
+  "les differents modes": {
+    "title": "Différents modes d'utilisation.",
+    "text": "Selon vos droits et selon vos choix, l'application vous propose différentes options",
+    "href": "https://github.com/Tilty-io/docs/blob/main/07-presentation-admin.md#les-différents-modes",
+    "doc": "07-presentation-admin#les-differents-modes"
+  },
+  "sources html": {
+    "title": "Gestion des sources html",
+    "text": "Gestion du code html, css, js, etc de votre projet",
+    "href": "https://github.com/Tilty-io/docs/blob/main/05-mode-architecte.md#les-sources-html",
+    "doc": "05-mode-architecte#les-sources-html"
+  },
+  "edit structure utiliser la valeur comme label": {
+    "title": "Utiliser la valeur du champ comme label.",
+    "text": "Au lieu d'afficher le nom du champ dans l'arborescence, on affiche sa valeur",
+    "href": "https://github.com/Tilty-io/docs/blob/main/05-mode-architecte.md#afficher-la-valeur-dans-larborescence",
+    "doc": "05-mode-architecte#utiliser-la-valeur-comme-label"
+  },
+  "edit structure page templates": {
+    "title": "Restreindre les modèles de page.",
+    "text": "Permet de restreindre les modèles de page que l'éditeur pourra sélectionner et ainsi éviter qu'il fasse des choix problématiques.",
+    "href": "",
+    "doc": "05-mode-architecte#restreindre-les-modeles-de-page"
+  },
+  "La gestion des langues": {
+    "title": "Gestion des langues du projet",
+    "text": "Ici vous pouvez ajouter, supprimer et gérer les langues du projet.",
+    "href": "https://github.com/Tilty-io/docs/blob/main/04-le-multilingue.md",
+    "doc": "04-le-multilingue"
+  }
+}
