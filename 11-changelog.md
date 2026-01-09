@@ -2,6 +2,10 @@
 
 # Historique des versions
 
+## v0.11.8 (2026-01-09)
+*   **Hotkeys** : Refonte de la gestion des raccourcis clavier.
+    *   Gestion contextuelle améliorée des touches **Enter** et **Escape** (scopes).
+
 ## v0.11.7 (2026-01-09)
 *   **ty-attributes** : Amélioration de la logique de suggestion des champs manquants.
     *   Les champs nommés `title`, `titre`, `subtitle`, `alt`, `name`, `nom`... sont maintenant suggérés comme **Texte Simple**.
