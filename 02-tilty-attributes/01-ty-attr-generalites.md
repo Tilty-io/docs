@@ -1,4 +1,4 @@
-> **Version** : undefined
+> **Version** : 0.11.18
 
 # Une approche respectueuse du HTML
 

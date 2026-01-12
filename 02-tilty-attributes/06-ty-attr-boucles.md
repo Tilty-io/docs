@@ -1,4 +1,4 @@
-> **Version** : undefined
+> **Version** : 0.11.18
 
 # Les boucles `ty-list`
 

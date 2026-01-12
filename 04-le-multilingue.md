@@ -1,4 +1,4 @@
-> **Version** : undefined
+> **Version** : 0.11.18
 
 # Implémentation du multilingue pour les architectes dans le code HTML.
 
