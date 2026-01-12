@@ -2,6 +2,10 @@
 
 # Historique des versions
 
+## v0.11.18 (2026-01-12)
+*   *(Version interne)* : Amélioration du workflow de versioning et de déploiement.
+
+
 ## v0.11.17 (2026-01-12)
 *   **Media** : Correction du crash lors de l'upload de GIFs (bypass getID3).
 *   **Media Dialog** : Réinitialisation de l'input fichier après sélection pour permettre la ré-upload du même fichier.
