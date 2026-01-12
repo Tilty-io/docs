@@ -2,6 +2,11 @@
 
 # Historique des versions
 
+## v0.11.17 (2026-01-12)
+*   **Media** : Correction du crash lors de l'upload de GIFs (bypass getID3).
+*   **Media Dialog** : Réinitialisation de l'input fichier après sélection pour permettre la ré-upload du même fichier.
+*   **API** : Correction des headers CORS pour le téléchargement de fichiers (`dwd-file.php`).
+
 ## v0.11.8 (2026-01-09)
 *   **Hotkeys** : Refonte de la gestion des raccourcis clavier.
     *   Gestion contextuelle améliorée des touches **Enter** et **Escape** (scopes).
