@@ -1,4 +1,4 @@
-> **Version** : 0.11.16
+> **Version** : 0.11.17
 
 # Notes de développement
 
