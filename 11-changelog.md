@@ -2,17 +2,30 @@
 
 # Historique des versions
 
+## Série v0.13
 
-## Série v0.12
+### v0.13.0 (2026-01-13)
+#### ↩️ Système d'annulation (Undo/Redo) - [EXPÉRIMENTAL]
+Cette version apporte une souplesse d'édition accrue avec la gestion de l'historique des modifications.
 
-### v0.12.0 (2026-01-12)
-#### 🚀 Refonte moteur de publication & Interface
-Cette version introduit une refonte de la robustesse du moteur de publication ainsi que la personnalisation de l'interface.
+*   **Undo / Redo** :
+    *   **Portée** : Support complet des annulations/rétablissements sur les modifications de contenu (textes, images, liens, etc.) au sein d'une page.
+    *   **Raccourcis** : <kbd>CTRL</kbd> + <kbd>Z</kbd> pour annuler, <kbd>CTRL</kbd> + <kbd>Y</kbd> ou <kbd>CTRL</kbd> + <kbd>MAJ</kbd> + <kbd>Z</kbd> pour rétablir.
+    *   **Précision** : L'historique se concentre sur le confort d'édition du contenu (les actions de structure comme la suppression ou création d'enregistrements restent définitives).
+
+> [!WARNING]
+> Cette fonctionnalité est actuellement en phase **expérimentale**. Son fonctionnement n'est pas garanti à 100% pour le moment et peut présenter des comportements imprévus selon la complexité des données.
 
 *   **Barre de navigation personnalisable** :
     *   **Visibilité à la carte** : Choisissez quelles fenêtres s'affichent directement dans la barre d'outils.
     *   **Accès rapide** : Clic droit sur n'importe quel bouton pour ouvrir le menu de configuration.
     *   **Centralisation** : Options disponibles dans les **Paramètres > Fenêtres**.
+
+## Série v0.12
+
+### v0.12.0 (2026-01-12)
+#### 🚀 Refonte moteur de publication & Robustesse
+Cette version introduit une refonte de la robustesse du moteur de publication.
 
 *   **Zéro échec de publication** : La publication est désormais **résiliente aux pannes**.
     *   **Auto-réparation** : Si des images générées sont manquantes (cache vide ou fichier supprimé), le moteur les **régénère automatiquement à la volée** pendant l'export, sans erreur.

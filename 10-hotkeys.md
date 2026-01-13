@@ -35,3 +35,6 @@
 
 > [!IMPORTANT]
 > L'historique (Undo/Redo) concerne uniquement les modifications de **contenu** au sein de la page ou de l'élément en cours d'édition. Les actions de structure (création/suppression d'enregistrements, modification de modèles) ne sont pas incluses dans cet historique.
+
+> [!WARNING]
+> **Fonctionnalité expérimentale** : Le système d'annulation est en cours de développement. Son fonctionnement n'est pas garanti et peut varier selon le contexte d'édition.
