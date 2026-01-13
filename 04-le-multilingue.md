@@ -1,4 +1,4 @@
-> **Version** : 0.12.0
+> **Version** : 0.13.0
 
 # Implémentation du multilingue pour les architectes dans le code HTML.
 
