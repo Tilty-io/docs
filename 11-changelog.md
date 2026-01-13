@@ -6,10 +6,15 @@
 ## Série v0.12
 
 ### v0.12.0 (2026-01-12)
-#### 🚀 Refonte moteur de publication
-Cette version introduit une refonte de la robustesse du moteur de publication.
+#### 🚀 Refonte moteur de publication & Interface
+Cette version introduit une refonte de la robustesse du moteur de publication ainsi que la personnalisation de l'interface.
 
-*   **Zéro échec** : La publication est désormais **résiliente aux pannes**.
+*   **Barre de navigation personnalisable** :
+    *   **Visibilité à la carte** : Choisissez quelles fenêtres s'affichent directement dans la barre d'outils.
+    *   **Accès rapide** : Clic droit sur n'importe quel bouton pour ouvrir le menu de configuration.
+    *   **Centralisation** : Options disponibles dans les **Paramètres > Fenêtres**.
+
+*   **Zéro échec de publication** : La publication est désormais **résiliente aux pannes**.
     *   **Auto-réparation** : Si des images générées sont manquantes (cache vide ou fichier supprimé), le moteur les **régénère automatiquement à la volée** pendant l'export, sans erreur.
     *   **Anti-Timeout** : Le processus de copie des fichiers est désormais **découpé en "chunks" intelligents** (paquets de 4 secondes). Cela permet de publier des projets contenant des milliers de fichiers sans jamais atteindre les limites de temps du serveur.
     *   **Tolérance aux erreurs** : Correction des crashs liés aux dossiers vides ou inexistants.
