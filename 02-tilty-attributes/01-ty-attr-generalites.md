@@ -25,7 +25,7 @@ En se limitant aux attributs, TyAttr garantit que le code HTML reste valide et l
 
 #### 2. Intégration fluide avec les éditeurs visuels
 
-Les éditeurs comme Webflow, Pinegrow ou encore les CMS Headless acceptent facilement l’ajout d’attributs personnalisés. Il est donc possible de préparer des pages dynamiques sans écrire de JavaScript ni toucher au backend, directement dans ces outils.
+Les éditeurs comme Webflow ou Pinegrow acceptent facilement l’ajout d’attributs personnalisés. Il est donc possible de préparer des pages dynamiques sans écrire de JavaScript ni toucher au backend, directement dans ces outils.
 
 #### 3. Aucune pollution du DOM
 
