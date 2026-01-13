@@ -49,3 +49,9 @@ Vous pouvez personnaliser les raccourcis visibles dans la barre de navigation pr
 
 > [!TIP]
 > Le menu "**...**" (Plus) affiche toujours la liste complète des fenêtres disponibles, même celles que vous avez choisi de masquer dans la barre principale.
+
+### Productivité et confort
+
+*   **Historique** : Vous pouvez annuler vos dernières modifications de contenu avec <kbd>CTRL</kbd> + <kbd>Z</kbd> et les rétablir avec <kbd>CTRL</kbd> + <kbd>Y</kbd> (ou <kbd>CTRL</kbd> + <kbd>MAJ</kbd> + <kbd>Z</kbd>).
+    *   *Note : L'historique porte uniquement sur le contenu de la page éditée et n'inclut pas les changements de structure (création ou suppression d'enregistrements).*
+*   **Raccourcis** : De nombreux autres raccourcis sont disponibles pour accélérer votre travail. Vous pouvez consulter la liste complète sur la page [Raccourcis clavier](10-hotkeys.md).
