@@ -4,6 +4,11 @@
 
 ## Série v0.13
 
+### v0.13.1 (2026-01-14)
+*   **Documentation** : Ajout de la page "Intégration avec les Agents IA" (Vision, MCP, Agnosticisme, Exemples polymorphes).
+*   **Documentation** : Ajout de la coloration syntaxique spécifique pour les attributs `ty-*` dans les exemples de code.
+*   **UI/Help** : Amélioration de la navigation dans l'aide avec une coloration hiérarchique des chapitres (H1/H2/H3) et ajout de bordures pour les images dans la documentation.
+
 ### v0.13.0 (2026-01-13)
 #### ↩️ Système d'annulation (Undo/Redo) - [EXPÉRIMENTAL]
 Cette version apporte une souplesse d'édition accrue avec la gestion de l'historique des modifications.
