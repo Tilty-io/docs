@@ -12,7 +12,7 @@ Tilty reste un système **léger, simple et autonome**. Son génie réside aille
 
 Enfin, clarifions une chose : Tilty ne se réclame pas de ces *"outils magiques"* où il suffit de prompter *"Fabrique-moi un site"* pour obtenir un résultat qui fonctionne "comme par magie" (tant que vous ne touchez à rien 😅). Tilty s'adresse à un **public de professionnels** qui exigent un contrôle total sur leur code source. Nous sommes ici à l'exact opposé du *Vibe Coding* : avec Tilty, l'humain reste le pilote, l'IA n'est que le copilote qui gère les tâches répétitives.
 
-C'est pourquoi Tilty est **foncièrement agnostique**. Nous ne voulons pas vous enfermer dans un écosystème d'IA propriétaire. Que vous utilisiez ChatGPT, Claude, Mistral ou un modèle local open-source tournant sur votre machine, Tilty reste simplement du HTML bien structuré et un CMS très typé. **Vous êtes libre de choisir votre intelligence.**
+C'est pourquoi Tilty est **foncièrement agnostique**. Nous ne voulons pas vous enfermer dans un écosystème d'IA propriétaire. Que vous utilisiez ChatGPT, Claude, Mistral ou un modèle local open-source tournant sur votre machine, Tilty reste simplement du HTML bien structuré couplé à un CMS très typé. **Vous êtes libre de choisir votre intelligence.**
 
 ## Domaines d'intervention
 
