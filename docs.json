@@ -124,6 +124,12 @@
     "file": "10-hotkeys"
   },
   {
+    "id": "agents-ia",
+    "label": "Intégrations Agents IA",
+    "icon": "nav_assistant",
+    "file": "12-agents-ia"
+  },
+  {
     "id": "changelog",
     "label": "Historique des versions",
     "icon": "timeline",
