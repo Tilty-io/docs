@@ -15,6 +15,9 @@ Cette approche permet une **compatibilité totale avec les éditeurs visuels** c
 Pourquoi complexifier quand on peut faire simple ?  
  **TyAttr est un pont entre le HTML statique et le CMS dynamique, tout en restant fidèle aux standards du web.**
 
+> [!TIP]
+> Tilty peut analyser vos attributs `ty-*` pour **créer automatiquement les champs** dans l'administration. Découvrez comment fonctionnent les **[Suggestions Automatiques](../05c-suggestions-champs.md)**.
+
 ## Pourquoi TyAttr utilise-t-il uniquement des attributs HTML ?
 
 L’utilisation exclusive des attributs HTML dans TyAttr n’est pas un hasard : c’est un choix technique et philosophique fort, basé sur plusieurs avantages concrets.

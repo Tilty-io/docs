@@ -58,6 +58,9 @@ TODO rédiger
 TODO rédiger
 
 ### Les différents types de champs
+> [!TIP]
+> **Gagnez du temps !** Utilisez les **[Suggestions Automatiques](05c-suggestions-champs.md)** pour que Tilty crée vos champs intelligemment à partir de votre code HTML (plus rapide que la création manuelle).
+
 
 ![](images/field_types.png)  
 Chaque donnée est caractérisée par ce que l'on appelle un type.   

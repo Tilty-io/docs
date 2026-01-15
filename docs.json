@@ -82,14 +82,20 @@
       {
         "id": "valeurs-par-defaut",
         "label": "Valeurs par défaut",
-        "icon": "star",
+        "icon": "cog",
         "file": "05a-valeurs-par-defaut"
       },
       {
         "id": "conventions-nommage",
         "label": "Conventions de nommage",
-        "icon": "abc",
+        "icon": "textFormat",
         "file": "05b-conventions-nommage"
+      },
+      {
+        "id": "suggestions-champs",
+        "label": "Suggestions de types",
+        "icon": "nav_assistant",
+        "file": "05c-suggestions-champs"
       }
     ]
   },
@@ -149,7 +155,7 @@
       {
         "id": "dependances",
         "label": "Dépendances",
-        "icon": "package",
+        "icon": "folderZip",
         "file": "99-dependances"
       }
     ]
