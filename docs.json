@@ -59,7 +59,7 @@
         "file": "02-tilty-attributes/08-ty-attr-images"
       }
     ],
-    "file": "02-tilty-attributes/00-index"
+    "file": "02-tilty-attributes/README"
   },
   {
     "id": "la-publication",
@@ -133,7 +133,15 @@
     "id": "agents-ia",
     "label": "Intégrations Agents IA",
     "icon": "nav_assistant",
-    "file": "12-agents-ia"
+    "file": "12-agents-ia",
+    "children": [
+      {
+        "id": "ai-toolkit",
+        "label": "AI Toolkit (Usage)",
+        "icon": "folderOpen",
+        "file": "ai-toolkit/README"
+      }
+    ]
   },
   {
     "id": "changelog",

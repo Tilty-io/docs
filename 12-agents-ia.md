@@ -256,6 +256,16 @@ Pour être efficace, une IA a besoin de contexte. Tilty lui en fournit via sa do
 
 La documentation est rédigée au format **Markdown (.md)** et disponible publiquement sur GitHub sur [https://github.com/Tilty-io/docs](https://github.com/Tilty-io/docs). Elle est conçue pour être aussi **lisible par une machine que par un humain**, permettant aux LLM de respecter votre syntaxe précise.
 
+> [!IMPORTANT]
+> **Nouveau : Le AI Toolkit** 🚀
+> Pour faciliter encore plus la vie des développeurs, Tilty inclut désormais un **AI Toolkit** prêt à l'emploi.
+> Situé dans le dossier `client/public/doc/ai-toolkit/` (ou directement à la racine de la documentation si vous l'avez téléchargée), il contient :
+> *   `AGENT_CONTEXT.md` : Un fichier "Master" optimisé contenant toute la documentation, les règles strictes et les définitions TypeScript. **C'est le fichier à donner à votre IA.**
+> *   `examples.md` : Un dataset d'entraînement "Few-Shot" avec des exemples "Before/After".
+> *   `ty-attributes.d.ts` : Les définitions de type officielles pour l'autocomplétion.
+>
+> 👉 **Conseil Pro** : Si vous utilisez Cursor ou Windsurf, ajoutez simplement le fichier `AGENT_CONTEXT.md` à votre contexte global pour transformer votre IDE en expert Tilty instantané.
+
 ### 2. Les Assistants de Code (Copilot, Cursor, Antigravity...)
 Les outils de développement modernes (dont l'excellent **Antigravity** propulsé par **Gemini**, qu'on aime beaucoup par ici 😉) offrent une compréhension contextuelle profonde. Ils permettent déjà :
 - **L'autocomplétion intelligente** des attributs `ty-*`.
