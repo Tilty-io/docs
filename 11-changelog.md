@@ -2,6 +2,26 @@
 
 # Historique des versions
 
+## Série v0.14
+
+### v0.14.0 (2026-01-15)
+#### ✨ Tilty-wysiwyg & Documentation IA
+Une mise à jour majeure axée sur la documentation et le contrôle fin de l'édition WYSIWYG.
+
+*   **Tilty-wysiwyg (`ty-wy`)** : Contrôle total sur l'interface d'édition.
+    *   **`ty-wy-ignore`** : Nouveaux modes `children` et `self` pour un contrôle précis de ce qui est éditable (conteneur vs enfants).
+    *   **`ty-wy-align`** : Positionnement flexible des boutons d'édition (top, bottom, left, center, right).
+    *   **`ty-wy-direction`** : Support des listes horizontales (`x`) avec adaptation automatique des icônes.
+
+*   **Documentation & IA** :
+    *   **Nouvelle page** : "Fine-tuning WYSIWYG" avec exemples unifiés pour une meilleure compréhension.
+    *   **AI Context** : Le fichier contextuel pour les agents IA (`AGENT_CONTEXT.md`) est maintenant 100% généré par script, garantissant une synchro parfaite avec le code.
+    *   **Zéro Hallucination** : Nettoyage des attributs inexistants dans la doc (ex: `ty-img`).
+
+*   **Correctifs** :
+    *   **Help Dialog** : Correction de la résolution des chemins d'images relatifs dans l'aide en ligne.
+    *   **UI** : Correction z-index des tooltips et regression du bouton `+`.
+
 ## Série v0.13
 
 ### v0.13.1 (2026-01-14)
