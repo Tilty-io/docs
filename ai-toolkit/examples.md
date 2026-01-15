@@ -216,3 +216,63 @@ The agent uses the correct `ty-if` attribute.
 <!-- CORRECT -->
 <span class="badge" ty-if="isOnSale">SALE!</span>
 ```
+
+---
+
+## 8. List with Duplicates (Simple List)
+
+### 📄 INPUT (Original HTML)
+A simple list of redundant items.
+```html
+<ul>
+  <li>hello</li>
+  <li>world</li>
+</ul>
+```
+
+### ❌ BAD (Redundant Definitions)
+The agent defines the template twice on identical items.
+```html
+<!-- INCORRECT: Defines 'text' template twice -->
+<ul ty-list="items">
+  <li ty-list-item="text" ty-text="value">hello</li>
+  <li ty-list-item="text" ty-text="value">world</li>
+</ul>
+```
+
+### ✅ GOOD (Unique Definition)
+The agent defines the schema ONCE and ignores the rest.
+```html
+<!-- CORRECT: First item is the template, others are ignored placeholders -->
+<ul ty-list="items">
+  <li ty-list-item="text" ty-text="value">hello</li>
+  <li ty-list-item="ignore">world</li>
+</ul>
+```
+
+---
+
+## 9. Variable Naming Rules (Keys must be identifiers)
+
+### 📄 INPUT (Original HTML)
+```html
+<h1>Welcome to our website</h1>
+<a href="https://google.com">Google</a>
+```
+
+### ❌ BAD (Using Content/Value as Key)
+The agent mistakenly uses the text content or the literal URL as the variable name.
+**Variable names must be camelCase identifiers, NOT sentences or URLs.**
+```html
+<!-- INCORRECT -->
+<h1 ty-text="Welcome to our website">Welcome to our website</h1>
+<a ty-href="https://google.com">Google</a>
+```
+
+### ✅ GOOD (Semantic CamelCase Keys)
+The agent chooses a short, descriptive identifier for the data key.
+```html
+<!-- CORRECT -->
+<h1 ty-text="heroTitle">Welcome to our website</h1>
+<a ty-href="externalLink" ty-text="linkLabel">Google</a>
+```

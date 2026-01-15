@@ -1607,6 +1607,7 @@ Si aucune règle ne matche, on se rabat sur du **Texte**.
 
  < !--SOURCE_FILE: 12-agents-ia -->
 
+> **Version** : 0.13.1
 
 # Intégration avec les Agents IA
 
@@ -1864,6 +1865,16 @@ Pour être efficace, une IA a besoin de contexte. Tilty lui en fournit via sa do
 
 La documentation est rédigée au format **Markdown (.md)** et disponible publiquement sur GitHub sur [https://github.com/Tilty-io/docs](https://github.com/Tilty-io/docs). Elle est conçue pour être aussi **lisible par une machine que par un humain**, permettant aux LLM de respecter votre syntaxe précise.
 
+> [!IMPORTANT]
+> **Nouveau : Le AI Toolkit** 🚀
+> Pour faciliter encore plus la vie des développeurs, Tilty inclut désormais un **AI Toolkit** prêt à l'emploi.
+> Situé dans le dossier `client/public/doc/ai-toolkit/` (ou directement à la racine de la documentation si vous l'avez téléchargée), il contient :
+> *   `AGENT_CONTEXT.md` : Un fichier "Master" optimisé contenant toute la documentation, les règles strictes et les définitions TypeScript. **C'est le fichier à donner à votre IA.**
+> *   `examples.md` : Un dataset d'entraînement "Few-Shot" avec des exemples "Before/After".
+> *   `ty-attributes.d.ts` : Les définitions de type officielles pour l'autocomplétion.
+>
+> 👉 **Conseil Pro** : Si vous utilisez Cursor ou Windsurf, ajoutez simplement le fichier `AGENT_CONTEXT.md` à votre contexte global pour transformer votre IDE en expert Tilty instantané.
+
 ### 2. Les Assistants de Code (Copilot, Cursor, Antigravity...)
 Les outils de développement modernes (dont l'excellent **Antigravity** propulsé par **Gemini**, qu'on aime beaucoup par ici 😉) offrent une compréhension contextuelle profonde. Ils permettent déjà :
 - **L'autocomplétion intelligente** des attributs `ty-*`.
@@ -1884,6 +1895,54 @@ Cela s'aligne avec notre philosophie agnostique : nous exposons un standard ouve
 Tilty dispose également d'une API REST (ouverte courant 2027) pour permettre aux agents de lire la structure, proposer des modifications ou s'interfacer avec le workflow de publication.
 
 *Cette API est actuellement en cours de définition et évoluera avec les futures versions. Restez connectés !*
+
+
+---
+
+
+ < !--SOURCE_FILE: ai-toolkit/README -->
+
+# 🤖 Tilty AI Toolkit
+
+This directory contains resources specifically designed to assist AI Agents (Cursor, Windsurf, GitHub Copilot, ChatGPT, Claude, etc.) in understanding and working with Tilty CMS.
+**(See on [GitHub](https://github.com/Tilty-io/docs/tree/main/ai-toolkit))**
+
+## 📄 The Main File: `AGENT_CONTEXT.md`
+
+This is the **Reference Document** for any AI interaction.
+It acts as a "Single Source of Truth" containing:
+1.  **Strict Syntax Rules** (No hallucinations allowed).
+2.  **TypeScript Definitions** for `ty-*` attributes.
+3.  **Few-Shot Training** (Examples of Good/Bad code).
+4.  **Technical Documentation** (Architecture, Multilingual, etc.).
+
+### 🚀 How to use it?
+
+#### 1. In AI Editors (Cursor, Windsurf, Copilot)
+When you start a coding session involving Tilty templates:
+1.  Open `AGENT_CONTEXT.md` in a tab (or pin it to context).
+2.  The AI will automatically "read" the definitions and examples.
+3.  Ask your question (e.g. *"Create a polymorphic list for a hero section"*).
+
+#### 2. With ChatBots (ChatGPT, Claude, Gemini)
+1.  **Upload** the `AGENT_CONTEXT.md` file to the chat.
+2.  Use the following prompt:
+    > "You are an expert Tilty Developer. I have uploaded the `AGENT_CONTEXT.md` file which contains the strict syntax and rules you must follow. Read it carefully before answering. Start by confirming the Tilty version."
+
+#### 3. Creating Custom GPTs
+If you are building a custom GPT or Assistant:
+1.  Upload `AGENT_CONTEXT.md` to its **Knowledge Base**.
+2.  In the System Instructions, add:
+    > "Always refer to `AGENT_CONTEXT.md` for syntax validation. Never invent conventions not listed in that file."
+
+---
+
+## 🛠️ Maintenance
+
+**⚠️ Note:** This toolkit is automatically generated during the Tilty release process.
+The source files (`examples.md`, `ty-attributes.d.ts`) and the generation script reside in the private Tilty Core repository.
+
+**Do not edit `AGENT_CONTEXT.md` manually**, as your changes will be overwritten by the next release.
 
 
 ---
@@ -2142,4 +2201,64 @@ The agent uses the correct `ty-if` attribute.
 ```html
 <!-- CORRECT -->
 <span class="badge" ty-if="isOnSale">SALE!</span>
+```
+
+---
+
+## 8. List with Duplicates (Simple List)
+
+### 📄 INPUT (Original HTML)
+A simple list of redundant items.
+```html
+<ul>
+  <li>hello</li>
+  <li>world</li>
+</ul>
+```
+
+### ❌ BAD (Redundant Definitions)
+The agent defines the template twice on identical items.
+```html
+<!-- INCORRECT: Defines 'text' template twice -->
+<ul ty-list="items">
+  <li ty-list-item="text" ty-text="value">hello</li>
+  <li ty-list-item="text" ty-text="value">world</li>
+</ul>
+```
+
+### ✅ GOOD (Unique Definition)
+The agent defines the schema ONCE and ignores the rest.
+```html
+<!-- CORRECT: First item is the template, others are ignored placeholders -->
+<ul ty-list="items">
+  <li ty-list-item="text" ty-text="value">hello</li>
+  <li ty-list-item="ignore">world</li>
+</ul>
+```
+
+---
+
+## 9. Variable Naming Rules (Keys must be identifiers)
+
+### 📄 INPUT (Original HTML)
+```html
+<h1>Welcome to our website</h1>
+<a href="https://google.com">Google</a>
+```
+
+### ❌ BAD (Using Content/Value as Key)
+The agent mistakenly uses the text content or the literal URL as the variable name.
+**Variable names must be camelCase identifiers, NOT sentences or URLs.**
+```html
+<!-- INCORRECT -->
+<h1 ty-text="Welcome to our website">Welcome to our website</h1>
+<a ty-href="https://google.com">Google</a>
+```
+
+### ✅ GOOD (Semantic CamelCase Keys)
+The agent chooses a short, descriptive identifier for the data key.
+```html
+<!-- CORRECT -->
+<h1 ty-text="heroTitle">Welcome to our website</h1>
+<a ty-href="externalLink" ty-text="linkLabel">Google</a>
 ```
