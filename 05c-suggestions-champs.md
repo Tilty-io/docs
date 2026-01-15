@@ -1,3 +1,5 @@
+> **Version** : 0.14.0
+
 # Suggestions automatiques de types de champs
 
 Cette fonctionnalité, destinée aux **architectes**, permet à Tilty de *tenter* de déduire le type de champ à créer dans l'app en analysant votre code HTML et vos attributs `ty-*`.

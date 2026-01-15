@@ -7,7 +7,7 @@ It is designed to provide comprehensive context for an AI Agent assisting with T
 
 ### 0. MANDATORY PROTOCOL
 - **ALWAYS START YOUR RESPONSE** with the following line on its own:
-  > Tilty v0.13.1
+  > Tilty v0.14.0
   (This ensures the user knows which version of the documentation you are using).
 
 ### 1. SYNTAX REFERENCE (TypeScript)
@@ -1600,6 +1600,7 @@ Pour vous y retrouver dans vos templates HTML, essayez de rester cohérent :
 
  < !--SOURCE_FILE: 05c-suggestions-champs -->
 
+
 # Suggestions automatiques de types de champs
 
 Cette fonctionnalité, destinée aux **architectes**, permet à Tilty de *tenter* de déduire le type de champ à créer dans l'app en analysant votre code HTML et vos attributs `ty-*`.
@@ -1999,6 +2000,7 @@ Tilty dispose également d'une API REST (ouverte courant 2027) pour permettre au
 
  < !--SOURCE_FILE: ai-toolkit/README -->
 
+
 # 🤖 Tilty AI Toolkit
 
 This directory contains resources specifically designed to assist AI Agents (Cursor, Windsurf, GitHub Copilot, ChatGPT, Claude, etc.) in understanding and working with Tilty CMS.
@@ -2080,6 +2082,8 @@ Le projet est développé avec les libs suivantes
 
 ---
 
+
+> **Version** : 0.14.0
 
 # EXAMPLES & COUNTER-EXAMPLES (FEW-SHOT TRAINING)
 

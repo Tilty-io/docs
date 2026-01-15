@@ -1,3 +1,5 @@
+> **Version** : 0.14.0
+
 # 🤖 Tilty AI Toolkit
 
 This directory contains resources specifically designed to assist AI Agents (Cursor, Windsurf, GitHub Copilot, ChatGPT, Claude, etc.) in understanding and working with Tilty CMS.
