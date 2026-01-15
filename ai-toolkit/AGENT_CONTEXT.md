@@ -1152,7 +1152,7 @@ Automatiquement, comme par magie (ou presque), des éléments d'interface vienne
 
 # Le WYSIWYG dans Tilty
 
-![](../02-tilty-attributes/images/wysiwyg_editor.png)
+![wysiwyg-ui-example.png](../images/wysiwyg-ui-example.png)
 
 ## Pourquoi utiliser un système WYSIWYG ?
 
