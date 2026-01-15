@@ -87,29 +87,31 @@ L'attribut vide (ou n'importe quelle valeur inconnue) dit à Tilty : "Cet élém
 C'est radical.
 
 ```html
-<!-- Ni ce div, ni le titre ne seront éditables -->
-<div ty-wy-ignore>
-    <h1 ty-html="title">Titre intouchable</h1>
+<!-- "user-card" est totalement ignoré. Tilty ne voit rien, comme si ce bloc était statique. Impossible de l'éditer, le déplacer ou modifier ses enfants -->
+<div class="user-card" ty-wy-ignore ty-scope="user">
+   <h2 ty-text="firstname">John</h2>
+   <h2 ty-text="lastname">Doe</h2>
 </div>
 ```
 
 **2. Ignorer les enfants (Protecteur)**
-Vous voulez éditer le conteneur (ex: changer une image de fond), mais pas touche au contenu complexe qu'il héberge.
+Vous appliquez ce réglage sur un élément parent (ex: une carte utilisateur) que vous voulez rendre éditable globalement (ex: pour changer une couleur de fond via un champ), tout en interdisant l'édition directe de son contenu texte.
 
 ```html
-<!-- Ce div est éditable, mais tout ce qui est dedans est ignoré -->
-<div ty-img="bg" ty-wy-ignore="children">
-   <complex-widget>...</complex-widget>
+<!-- On peut cliquer sur la "user-card" pour l'éditer, mais ses enfants (John, Doe) ignorent le clic -->
+<div class="user-card" ty-wy-ignore="children" ty-scope="user">
+   <h2 ty-text="firstname">John</h2>
+   <h2 ty-text="lastname">Doe</h2>
 </div>
 ```
 
 **3. Ignorer soi-même (Subtil)**
-C'est le plus difficile à appréhender. Vous voulez que le conteneur soit transparent pour le WYSIWYG (pas de cadre bleu au survol), mais que ses enfants restent éditables individuellement.
-Utile pour les wrappers de mise en page qui ne portent pas de données.
+À l'inverse, ici le conteneur devient "transparent" pour le WYSIWYG. Il est impossible de sélectionner le bloc "user-card" lui-même, en revanche ses enfants sont accessibles et éditables individuellement.
 
 ```html
-<!-- Ce div est ignoré (pas de cadre), mais le h1 reste éditable ! -->
-<div class="wrapper-inutile" ty-wy-ignore="self">
-    <h1 ty-html="title">Titre éditable</h1>
+<!-- La "user-card" est intouchable (le clic passe au travers), par contre on peut cliquer et éditer John et Doe -->
+<div class="user-card" ty-wy-ignore="self" ty-scope="user">
+   <h2 ty-text="firstname">John</h2>
+   <h2 ty-text="lastname">Doe</h2>
 </div>
 ```
