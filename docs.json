@@ -57,6 +57,12 @@
         "label": "Optimiser les images",
         "icon": "image",
         "file": "02-tilty-attributes/08-ty-attr-images"
+      },
+      {
+        "id": "tilty-attributes/fine-tuning-wysiwyg",
+        "label": "Fine-tuning WYSIWYG",
+        "icon": "nav_edit",
+        "file": "02-tilty-attributes/09-fine-tuning-wysiwyg"
       }
     ],
     "file": "02-tilty-attributes/README"
