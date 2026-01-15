@@ -25,3 +25,6 @@
 
 - [Fonctionnalités avancées](07-ty-attr-avance.md)  
   Techniques avancées : hooks, transformations et exemples complexes.
+
+- [Fine-tuning WYSIWYG](09-fine-tuning-wysiwyg.md)  
+  Maitriser l'éditeur visuel : ignorer des éléments, positionner les boutons et personnaliser l'expérience d'édition.

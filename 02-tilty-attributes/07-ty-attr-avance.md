@@ -213,28 +213,4 @@ xxxx correspond à l'id d'un champ ce qui permet de retrouver les intégrations 
 |  |  |  |
 |  |  |  |
 
-# Tilty-wysiwyg (ty-wy)
 
-Conjointement à Tilty Attributes, un mécanisme WYSIWYG se met en place afin de faciliter l'édition de contenu.   
-Automatiquement sur tous les éléments ty-attributes déclarés s'installent des éléments utilisateurs qui permettent de 
-
-# Le WYSIWYG dans Tilty
-
-![](images/wysiwyg_editor.png)  
-TODO rédiger
-
-## Pourquoi utiliser un système WYSIWYG ?
-
-Tilty offre un contrôle très fin des données, ce qui conduit souvent à des arbres de données complexes et à une édition potentiellement fastidieuse. Avec une approche WYSIWYG by design, l’interface HTML — naturellement compréhensible par l’utilisateur — devient le point d’entrée. 
-
-Grâce aux Tilty Attributes appliqués à votre HTML, la mise en page est directement liée aux données : vous modifiez le contenu là où il s’affiche. Résultat : accès plus rapide aux données, moins de friction, et une édition qui suit l’évidence ergonomique du design HTML.
-
-# Mise en oeuvre du WYSIWYG
-
-Par défaut si vous utilisez des Tilty Attributes, le wysiwyg est automatiquement activé.  
-Ce qui suit sert à améliorer la gestion automatique du WYSIWYG
-
-| Attributs pour limiter le WYSIWYG |                                                                               |
-|:----------------------------------|:------------------------------------------------------------------------------|
-| `ty-wy-ignore="children"`         | Le wysiwyg est désactivé sur les éléments HTML enfants                        |
-| `ty-wy-ignore="self"`             | Le wysiwyg est désactivé sur l'élément HTML mais pas sur les éléments enfants |
