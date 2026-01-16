@@ -1,4 +1,4 @@
-> **Version** : 0.14.0
+> **Version** : 0.15.0
 
 # Gestion des urls et SEO (finir de rédiger)
 
@@ -203,6 +203,7 @@ La publication peut prendre plusieurs minutes, ce qui suit vous explique ce qui 
 * génération des pages html \+ localisations
 * génération des sitemap.xml \+ localisations
 * génération des fichiers optionnels tels que index.html ou encore .htaccess
+* **génération des fichiers de redirections** (voir [Les redirections](13-les-redirections.md))
 * copie des médias.
 * copie des médias optimisés (images webp etc)
 

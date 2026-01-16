@@ -7,7 +7,7 @@ It is designed to provide comprehensive context for an AI Agent assisting with T
 
 ### 0. MANDATORY PROTOCOL
 - **ALWAYS START YOUR RESPONSE** with the following line on its own:
-  > Tilty v0.14.0
+  > Tilty v0.15.0
   (This ensures the user knows which version of the documentation you are using).
 
 ### 1. SYNTAX REFERENCE (TypeScript)
@@ -88,6 +88,48 @@ Your primary goal is often to transform static HTML into dynamic Tilty templates
 (See "FEW-SHOT TRAINING" section at the end of this document for explicit examples).
 
 
+
+
+ < !--SOURCE_FILE: README -->
+
+
+# Index de l'aide
+
+## Introduction
+- [Tilty en résumé](see 01-tilty-en-resume)
+- [Historique des versions](see 11-changelog)
+
+## Concepts
+- [Tilty Attributes (ty-*)](see 02-tilty-attributes/README)
+  - [Liste des attributs](see 02-tilty-attributes/02-ty-attr-list)
+  - [Syntaxe des expressions](see 02-tilty-attributes/03-ty-attr-syntaxe)
+  - [Modèles de données](see 02-tilty-attributes/04-ty-attr-modeles)
+- [Le multilingue](see 04-le-multilingue)
+- [La publication](see 03-la-publication)
+- [Les redirections](see 13-les-redirections)
+
+## Utilisation de l'interface
+- [Présentation de l'Admin](see 07-presentation-admin)
+- [Présentation du Dashboard](see 08-presentation-dashboard)
+- [Mode Editeur](see 06-mode-editeur)
+- [Raccourcis clavier](see 10-hotkeys)
+
+## Architecture & Configuration
+- [Mode Architecte](see 05-mode-architecte)
+- [Valeurs par défaut](see 05a-valeurs-par-defaut)
+- [Conventions de nommage](see 05b-conventions-nommage)
+- [Suggestions de types](see 05c-suggestions-champs)
+- [Agents IA](see 12-agents-ia)
+
+## Extensions
+- [Tilty Kiosk](see 09-tilty-kiosk)
+
+## Technique / Développement
+- [Notes de développement](see 98-notes-dev)
+- [Dépendances](see 99-dependances)
+
+
+---
 
 
  < !--SOURCE_FILE: 01-tilty-en-resume -->
@@ -1315,6 +1357,58 @@ Cette option est utile si vous souhaitez vous focaliser sur une seule langue ou 
 ---
 
 
+ < !--SOURCE_FILE: 13-les-redirections -->
+
+
+# Les redirections
+
+Parce que personne n'aime les erreurs 404, surtout Google. La fenêtre **Redirections** est là pour dire "J'ai déménagé" proprement.
+
+> [!IMPORTANT]
+> **Patience** : Les redirections ne s'activent qu'après la **publication**. Ne cherchez pas à tester tant que vous n'avez pas cliqué sur le bouton qui fait peur.
+
+## En bref
+*   **301** (Défaut) : Déménagement définitif. La nouvelle adresse remplace l'ancienne dans l'historique de tout le monde.
+*   **302** : "Je teste un truc". Temporaire. À utiliser seulement si vous savez pourquoi.
+
+## Configuration
+Sélectionnez une redirection ou créez-en une **(+)** pour ouvrir le panneau d'édition.
+
+| Champ | Explication & Nuances |
+| :--- | :--- |
+| **Source** | L'URL d'origine qui ne doit plus exister.<br><br>• **Relative** (ex: `/vieux-truc`) : <br>Standard. Marche partout, tout le temps.<br><br>• **Absolue** (ex: `https://.../vieux-truc`) : <br>Strict. Ne marche que si le domaine correspond *exactement*. |
+| **Cible** | Où est-ce qu'on va ?<br><br>• **Page interne** (Recommandé) : <br>Vous sélectionnez une page du site. Si vous la renommez demain, le lien suit. Magique.<br><br>• **URL Personnalisée** : <br>Pour renvoyer vers `.google.com`.<br>⚠️ **Attention** : Si vous mettez une URL relative ici (`/ma-page`), profitez bien de votre erreur 404 future quand vous changerez la structure du site. |
+| **Locale** | *Uniquement pour cible "Page interne"*<br><br>• **Vide** (Recommandé) : Le système choisira la meilleure langue pour le visiteur.<br>• **Définie** : Force la redirection vers cette langue précise, qu'il pleuve ou qu'il vente. |
+| **Code** | 301. Sauf si vous avez un doctorat en SEO qui vous dit le contraire. |
+
+> [!TIP]
+> **Source** : Le système se fiche que vous mettiez `/fr/vieux-truc` ou `/vieux-truc`. Il redirigera l'adresse exacte demandée. La prise en charge des redirection se fait avant même qu'on n'ait déterminé la langue du visiteur.
+
+## Astuce de pro : URLs "Marketing" (Short links)
+Vous pouvez utiliser les redirections pour créer des liens courts et faciles à retenir pour vos campagnes.
+Exemple : Créez une redirection de `/promo` vers `/produits/collection-ete/promo-speciale-2024`.
+C'est propre, c'est court, et ça marche parfaitement.
+
+## Selon le serveur de publication
+Selon votre hébergement, Tilty gère les redirections différemment :
+
+**Serveur Tilty ou serveur avec prise en charge de PHP** : Pas de sujet, les redirections sont gérées avec de vrais en-têtes HTTP (Headers). C'est rapide, invisible et **parfait pour le SEO** (Google adore).
+
+**Export Statique (HTML)** :
+Pour assurer une compatibilité maximale (Apache, IIS, Statique pur, etc.), Tilty génère désormais une stratégie de redirection "ceinture et bretelles".
+Pour chaque redirection, un dossier physique est créé contenant :
+1.  `index.php` (Header 301) : Prioritaire si PHP est dispo.
+2.  `.htaccess` (Apache) : Redirection native 301 si Apache est utilisé.
+3.  `web.config` (IIS) : Redirection native pour les serveurs Windows.
+4.  `index.html` (Meta Refresh + JS) : Fallback ultime si rien d'autre ne marche.
+
+> [!NOTE]
+> **SEO** : Grâce à cette stratégie hybride, même sur un export statique, vous bénéficiez le plus souvent d'une vraie redirection 301 (via `.htaccess` ou `web.config`), ce qui est optimal pour le SEO. Le fallback HTML/JS assure juste que l'utilisateur n'est jamais perdu.
+
+
+---
+
+
  < !--SOURCE_FILE: 05-mode-architecte -->
 
 
@@ -2085,7 +2179,7 @@ Le projet est développé avec les libs suivantes
 ---
 
 
-> **Version** : 0.14.0
+> **Version** : 0.15.0
 
 # EXAMPLES & COUNTER-EXAMPLES (FEW-SHOT TRAINING)
 
