@@ -86,6 +86,12 @@
     "file": "04-le-multilingue"
   },
   {
+    "id": "les-redirections",
+    "label": "Les redirections",
+    "icon": "shuffle",
+    "file": "13-les-redirections"
+  },
+  {
     "id": "mode-architecte",
     "label": "Mode Architecte",
     "icon": "nav_architecture",

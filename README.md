@@ -13,6 +13,7 @@
   - [Modèles de données](02-tilty-attributes/04-ty-attr-modeles.md)
 - [Le multilingue](04-le-multilingue.md)
 - [La publication](03-la-publication.md)
+- [Les redirections](13-les-redirections.md)
 
 ## Utilisation de l'interface
 - [Présentation de l'Admin](07-presentation-admin.md)
