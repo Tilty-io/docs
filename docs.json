@@ -1,5 +1,11 @@
 [
   {
+    "id": "index",
+    "label": "Index",
+    "icon": "home",
+    "file": "README"
+  },
+  {
     "id": "tilty-en-resume",
     "label": "Tilty en résumé",
     "icon": "helpPage",
