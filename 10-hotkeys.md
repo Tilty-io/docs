@@ -8,7 +8,7 @@
 |:---------------------------------------------------------------------------------------|:----------------------------------------|:------------|:------------|:---------------|
 |                                                                                        |                                         | **Lecteur** | **Editeur** | **Architecte** |
 | <kbd>ENTER</kbd>                                                                       | Valide l'action active (ex: formulaire) | x           | x           | x              |
-| <kbd>ESC</kbd>                                                                         | Ferme la fenêtre active                 | x           | x           | x              |
+| <kbd>ESC</kbd>                                                                         | Ferme la fenêtre ou le formulaire actif | x           | x           | x              |
 | <kbd>M</kbd>                                                                           | maximise ou minimise la fenêtre active  | x           | x           | x              |
 | <kbd>X</kbd> enfoncé                                                                   | Désactive l'édition WYSIWYG             |             | x           | x              |
 | <kbd>X</kbd> relâché                                                                   | Réactive l'édition WYSIWYG              |             | x           | x              |
@@ -16,7 +16,7 @@
 | Fonctionne sur                                                                         | page / list-item                        |             | x           | x              |
 |                                                                                        | atomic data                             |             | x           | x              |
 |                                                                                        | atomic structure                        |             |             | x              |
-| <kbd>CTRL</kbd> + <kbd>C</kbd>                                                         | Copie  l'élément sélectionné            |             | x           | x              |
+| <kbd>CTRL</kbd> + <kbd>C</kbd>                                                         | Copie l'élément sélectionné            |             | x           | x              |
 | Fonctionne sur                                                                         | page                                    |             | x           | x              |
 |                                                                                        | atomic data / list-item                 |             | x           | x              |
 |                                                                                        | atomic structure                        |             |             | x              |
@@ -25,10 +25,11 @@
 |                                                                                        | atomic data / list                      |             | x           | x              |
 |                                                                                        | atomic structure                        |             |             | x              |
 | <kbd>DELETE</kbd> / <kbd>SUPPR</kbd>                                                   | Supprime l'élément sélectionné          |             | x           | x              |
-| Fonctionne sur                                                                         | page                                    |             | x           | x              |
-|                                                                                        | atomic data                             |             | x           | x              |
+| Fonctionne sur                                                                         | Pages et blocs de contenu               |             | x           | x              |
 |                                                                                        | atomic structure                        |             |             | x              |
-|                                                                                        | media                                   |             | x           | x              |
+|                                                                                        | Médias                                  |             | x           | x              |
+|                                                                                        | Redirections                            |             | x           | x              |
+| <kbd>CTRL</kbd> + <kbd>F</kbd>                                                         | Ouvre le champ de recherche             | x           | x           | x              |
 | <kbd>CTRL</kbd> + <kbd>Z</kbd>                                                         | Annuler la modification (contenu)       |             | x           | x              |
 | <kbd>CTRL</kbd> + <kbd>Y</kbd> (ou <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Z</kbd> ) | Rétablir la modification                |             | x           | x              |
 
