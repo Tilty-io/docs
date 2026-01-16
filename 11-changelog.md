@@ -2,6 +2,25 @@
 
 # Historique des versions
 
+## Série v0.15
+
+### v0.15.0 (2026-01-16)
+#### 🔀 Gestion des Redirections
+Une version majeure introduisant un système complet de gestion des redirections, compatible avec tous les environnements.
+
+*   **Redirections** :
+    *   **Interface Admin** : Nouvelle fenêtre dédiée pour gérer vos codes 301 et 302.
+    *   **Flexibilité** : Support des redirections vers des pages internes (résistantes au renommage) ou des URLs personnalisées.
+    *   **Publication Hybride** : Le moteur de publication génère désormais une stratégie "ceinture et bretelles" pour chaque redirection :
+        1.  `index.php` (Header 301) pour les serveurs dynamiques.
+        2.  `.htaccess` (Apache) et `web.config` (IIS) pour une gestion serveur native.
+        3.  `index.html` (Meta Refresh + JS) comme fallback universel pour le statique pur.
+    *   **SEO** : Optimisation maximale pour les moteurs de recherche grâce aux headers 301 réels.
+
+*   **Correctifs & Améliorations** :
+    *   **Serveur** : Correction d'erreurs 403 sur les URLs contenant des espaces ou caractères spéciaux (Flag `[B]` Apache).
+    *   **Hotkeys** : Amélioration du support des raccourcis clavier contextuels dans les fenêtres modales.
+
 ## Série v0.14
 
 ### v0.14.0 (2026-01-15)
